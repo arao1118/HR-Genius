@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: hr-genius
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+server:
+  port: ${PORT:8080}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+hrgenius:
+  jwt:
+    secret: ${HR_JWT_SECRET:dev-only-secret-change-this-to-a-random-secret-at-least-32-bytes}
+    expiration-ms: 3600000

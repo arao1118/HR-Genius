@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${HR_DB_URL}
+    username: ${HR_DB_USERNAME}
+    password: ${HR_DB_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.OracleDialect
